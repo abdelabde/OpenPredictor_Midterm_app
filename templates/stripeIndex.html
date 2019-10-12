@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block body %}
+{% include "navbar.html" %}
+<title>Payment</title>
+<section class="hero is-primary is-bold is-small">
+  <div class="hero-body">
+    <!-- <div class="container has-text-centered"> -->
+    <div class="container has-text-left">
+      <div id="pneumonia" class="settings-box">
+        <div class="settings-area">    
+          <h1 class="title">Payment</h1>         
+          <div class="field">
+            <div>
+              <h2>Buy for $1.00</h2>
+              <form action="/stripeCharge" method="post">
+                <script
+                  src="https://checkout.stripe.com/checkout.js"
+                  class="stripe-button"
+                  data-key="{{ key }}"
+                  data-description="Diagnosis Charge"
+                  data-amount="100"
+                  data-locale="auto">
+                </script>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>    
+    </div>
+  </div>
+</section>
+{% endblock %}
+{% block scripts %}
+<script src="../static/js/scripts.js"></script>
+{% endblock %}
+      

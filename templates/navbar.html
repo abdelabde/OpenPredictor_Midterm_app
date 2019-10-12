@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hooli Stock App</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+<link rel="stylesheet" href="static/css/w3.css">
+<link rel="stylesheet" type="text/css" href="static/css/style.css">
+
+<link href="static/css/hooli.css" rel="stylesheet">
+<script type="text/javascript" src="//code.jquery.com/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="//code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+<link rel="stylesheet" type="text/css" href="//code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+<!-- Styles -->
+<style>
+    body {
+        background-color: #30303d;
+        color: #fff;
+    }
+    
+    #chartdiv {
+        width: 100%;
+        height: 500px;
+    }
+</style>
+</head>
+<section class="hero is-white">
+  <nav class="navbar is-transparent">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="/">
+        <img src="static/img/logo.png" alt="Flaskex_logo">
+        <h6 href="/" class="subtitle"><strong>OpenPredictor</strong></h6>
+      </a>
+      <div id="navbar-burger-id" class="navbar-burger burger" data-target="navbar-menu-id">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <div id="navbar-menu-id" class="navbar-menu">
+      <div class="navbar-start"></div>
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="field is-grouped">
+            <p class="control">
+              <a href="/logout" class="button is-primary is-outlined">
+                <span>Logout</span>
+              </a>
+            </p>
+            <p class="control">
+              <a href="/settings" class="button is-primary is-outlined">
+                <span id="cog" class="icon">
+                  <i class="fa fa fa-cog"></i>
+                </span>
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</section>
+<title>OpenPredictor</title>
+<section class="app__hero">
+    <video id=myVideo class="app__hero__video" src="static/videos/abdel.mp4" loop="" autoplay="" muted=""></video>
+        <div class="row align-middle">
+            <div>
+                <!--div class="columns medium-12"><img src="static/img/logo.png" alt="Logo" width="200"-->
+                    <h1 class="app__hero__title">Making the world a better place with one stock at time. </h1></div>
+
+                <script type="text/javascript">
+                    $(window).load(function() {
+                        var vid = document.getElementById("myVideo");
+                        vid.playbackRate =0.4;
+                        if ($('#start')[0].type != 'date') $('#start').datepicker();
+                        if ($('#end')[0].type != 'date') $('#end').datepicker();
+                    
+
+                    });
+                </script>
+                <div>
+                    <form method="POST" action="/data" role="form" id="form">
+                        <div class="form-group">
+                        <div class="column is-auto">
+                            <div id="signup-box" class="signup-box">
+                              <h1 class="title">Prediction</h1>
+                                <div class="field">
+                                  <label class="sr-only">Enter a Stock Symbol</label>
+                                  <input type="text" name="search" placeholder="Symbol: eg. aapl..." size="20" required />
+                                </div>
+                                <div>
+                                   <select name="sourcery"style="width: 185px;">
+                                    <option value="yahoo">Yahoo Finance</option>
+                                   </select>
+                                </div>
+                                </br>
+                                </br>
+                                <div class="field"
+                                   <label for="start">Start date:</label>
+                                   <input type="date" id="start" name="trip-start" value="" min="1970-01-01" max="2030-12-31" size="20"required>
+                                </div>
+                                <div class="field"
+                                   <label for="end">End date:</label>
+                                   <input type="date" id="end" name="trip-end" value="" min="1970-01-01" max="2030-12-31" size="20"required>
+                                </div>
+                                <div>
+                                   <input class="w3-button w3-block w3-hover-blue-grey" type="submit" value="Submit">
+                                </div>
+                              </div>
+                           </div>
+                           </div>    
+                    </form>
+                </div>
+            </div>
+        </div>
+</section>
+
+<!-- Footer -->
+<footer class="w3-container w3-black w3-center">
+    <p>Made with ❤ by <a href="https://github.com/abdelabde" target="_blank">@Abdelhakim</a> from <a href="Morocco" target="_blank">Morocco</a></p>
+</footer>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

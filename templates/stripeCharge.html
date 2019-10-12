@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block body %}
+{% include "navbar.html" %}
+<title>Payment Completed</title>
+<section class="hero is-primary is-bold is-small">
+  <div class="hero-body">
+    <!-- <div class="container has-text-centered"> -->
+    <div class="container has-text-left">
+      <div id="pneumonia" class="settings-box">
+        <div class="settings-area">    
+          <h1 class="title">Payment Completed</h1>         
+          <div class="field">
+            <div>
+              <h2>Thanks, you paid <strong>$1.00</strong>!</h2>
+              <h2><strong>Now let's see the results</strong>!</h2>
+              <div class="field">
+                <form id="process" action="{{ url_for('process') }}" method="POST">
+                  <input type="hidden" name="folder_name" value={{ folder_name }}>
+                  <input type="submit" value="Results" id="login-button" class="form-button button is-primary is-inverted is-outlined">
+                </form>        
+              </div>                
+            </div>
+          </div>
+        </div>
+      </div>    
+    </div>
+  </div>
+</section>
+{% endblock %}
+{% block scripts %}
+<script src="../static/js/scripts.js"></script>
+{% endblock %}
+      
