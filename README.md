@@ -7,6 +7,9 @@ repository contains a web application that predicts stock movement for many comp
 to get it running in a local dev environment:
 
 $ git clone https://github.com/abdelabde/OpenPredictor_Midterm_app
-$ cd ml-midterm-flask
+
+$ cd OpenPredictor_Midterm_app
+
 $ pip install -r requirements.txt
+
 $ python app.py
